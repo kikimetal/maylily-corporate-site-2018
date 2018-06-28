@@ -55,7 +55,7 @@ const Page01 = props => {
   )
 
   return (
-    <div className="Page01 page">
+    <div className="Page01 page Story">
       <h1 className="page-title">{props.routes.page01.heading}</h1>
       {
         status === "fulfilled"

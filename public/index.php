@@ -7,11 +7,15 @@ $root_uri = '/';
 // 許可する URL
 if ($_SERVER["HTTP_HOST"] === 'www.carvancl.co.jp' || $_SERVER["HTTP_HOST"] === 'carvancl.co.jp') {
   $root_url = $http_protocol . 'www.carvancl.co.jp';
-  $root_uri = '/hpv2/';
+  $root_uri = '/v2/';
 }
 if ($_SERVER["HTTP_HOST"] === 'www.kikimetal.com' || $_SERVER["HTTP_HOST"] === 'kikimetal.com') {
   $root_url = $http_protocol . 'www.kikimetal.com';
-  $root_uri = '/hpv2/';
+  $root_uri = '/v2/';
+}
+if ($_SERVER["HTTP_HOST"] === 'www.maylily.co.jp' || $_SERVER["HTTP_HOST"] === 'maylily.co.jp') {
+  $root_url = $http_protocol . 'www.maylily.co.jp';
+  $root_uri = '/v2/';
 }
 
 // assets ディレクトリの設定
@@ -91,7 +95,7 @@ if ($this_route !== null) {
 
   <!-- app component -->
   <script acync defer src="<?= $assets_url ?>/js/bundle.js"></script>
-  
+
   <!-- fontawesome -->
   <script acync defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 </body>

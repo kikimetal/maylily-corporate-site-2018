@@ -35,7 +35,7 @@ class App extends React.Component{
     this.props.setWindowSize()
     this.props.getNews()
     this.props.getStory()
-    this.props.getService()
+    // this.props.getService()
   }
 
   componentWillUnmount(){

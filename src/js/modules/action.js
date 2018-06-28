@@ -119,7 +119,7 @@ const fetchJsonAndDispatch = (fetchUrl, actionTypeString, dispatchFunction) => {
       })
     })
     .catch(error => {
-      console.error("ERROR in redux action:", error)
+      console.error("ERROR in redux action at " + actionTypeString, error)
       dispatchFunction({
         type: actionTypeString,
         data: null,

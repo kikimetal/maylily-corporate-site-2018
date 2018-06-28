@@ -1,6 +1,8 @@
 <?php
 // google spreadsheets id
-const GSSID = "17emL3haHaFgGzw8B8C_lXHTZIK_9K9zE0nILAPJn7-0";
+// const GSSID = "17emL3haHaFgGzw8B8C_lXHTZIK_9K9zE0nILAPJn7-0";
+const GSSID = "1QUfjuyezpUIzpLWoTyrq52OPdK8Gkfj_UNNqoui_964";
+
 // GET リクエストがきちんとあるか
 if (!empty($_GET) && !empty($_GET["sheetName"])) {
   // 引数を元に json object を取得。失敗で false が返る。
