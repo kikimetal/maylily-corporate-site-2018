@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UI 03</title>
+    <style media="screen">
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .map{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .top{
+        width: 100%;
+        height: 160px;
+        background: #fafafa;
+        z-index: 2;
+        width: 100%;
+        height: 14vh;
+      }
+      .bottom{
+        height: 20px;
+        background: #333;
+        z-index: 3;
+        clip-path: url(#myPath);
+        animation: path 1s ease infinite both;
+      }
+      @keyframes path{
+        from{
+          clip-path: url(#myPath);
+        }
+        to{
+          clip-path: url(#myPath2);
+        }
+      }
+      .content{
+        width: 100%;
+        height: 300vh;
+        padding-top: 160px;
+        background: #d7d7d7;
+        z-index: 1;
+      }
+      svg{
+        background: white;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map">
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
+    <div class="content">
+      <svg width="100px" height="100px">
+        <path d="M 10 10 H 90 V 90 H 10 Z" fill="thistle"></path>
+        <path d="M 0 0 L 100 0 L 100 10 C 100 10, 50 -6, 0 10 Z" fill="thistle" />
+      </svg>
+      <svg>
+        <!-- <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+          <path d="M0.5,1
+          C 0.5,1,0,0.7,0,0.3
+          A 0.25,0.25,1,1,1,0.5,0.3
+          A 0.25,0.25,1,1,1,1,0.3
+          C 1,0.7,0.5,1,0.5,1 Z" />
+        </clipPath> -->
+        <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.99 C 1 0.99, 0.5 -1.1, 0 0.99 Z" fill="thistle" />
+        </clipPath>
+        <clipPath id="myPath2" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.99 C 1 0.99, 1 0.99, 0 0.99 Z" fill="thistle" />
+        </clipPath>
+      </svg>
+    </div>
+  </body>
+</html>
